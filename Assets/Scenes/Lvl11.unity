@@ -1324,10 +1324,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 382757836, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
-      propertyPath: m_text
-      value: 'Level: 11'
-      objectReference: {fileID: 0}
     - target: {fileID: 1341435462074137539, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1375,10 +1371,6 @@ PrefabInstance:
     - target: {fileID: 1341435462074137542, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240133812720875297, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
-      propertyPath: sceneNo
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
@@ -1960,6 +1952,8 @@ MonoBehaviour:
   cam: {fileID: 1128216280}
   meshR: {fileID: 1135878733}
   sCollider: {fileID: 1135878732}
+  posx: 0
+  posz: 0
 --- !u!65 &1527346141
 BoxCollider:
   m_ObjectHideFlags: 0
