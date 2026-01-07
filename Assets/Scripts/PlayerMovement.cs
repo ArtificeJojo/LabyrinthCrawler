@@ -8,11 +8,21 @@ public class PlayerMovement : MonoBehaviour
     public float moveVal = 0.01f;
     public Camera cam;
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         UpDown();
         LeftRight();
         //MoveDiagonal();
+    }
+
+    public void Disable()
+    {
+        moveVal = 0;
+    }
+
+    public void Enable()
+    {
+        moveVal = 0.01f;
     }
 
     void UpDown()
