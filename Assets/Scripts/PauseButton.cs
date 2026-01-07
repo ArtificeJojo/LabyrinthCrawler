@@ -5,40 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class PauseButton : MonoBehaviour
 {
-    public bool isPaused = false;
-    public GameObject pauseMenu;
+    public GameObject resumeButton, restartButton, quitButton;
+    public int sceneNo;
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(false);
+      resumeButton.SetActive(false);
+      restartButton.SetActive(false);
+      quitButton.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Unpause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Resume();
-        else
-            Pause();
+        resumeButton.SetActive(false);
+        restartButton.SetActive(false);
+        quitButton.SetActive(false);
     }
-
-    public void Resume()
-    {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
-
-    public void Pause()
-    {
-        pauseMenu.SetActive(true);
+    public void Paused()
+    {   
         Time.timeScale = 0f;
-        isPaused = true;
-    }
 
-    public void LoadMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("PauseMenu");
+        resumeButton.SetActive(true);
+        restartButton.SetActive(true);
+        quitButton.SetActive(true);
     }
+  
 }

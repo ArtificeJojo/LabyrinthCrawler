@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class ResumeButton : MonoBehaviour
 {
     public int sceneNo = 0;
+    public PauseButton pauseButton;
+
     public void Resume()
     {
-        SceneManager.LoadScene(sceneNo);
+        Time.timeScale = 1f; 
+        pauseButton.Unpause();
     }
 }
