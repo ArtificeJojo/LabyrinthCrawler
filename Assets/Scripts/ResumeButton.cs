@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ResumeButton : MonoBehaviour
 {
-    public int sceneNo = 0;
     public PauseButton pauseButton;
     public PlayerMovement playerMovement;
 
