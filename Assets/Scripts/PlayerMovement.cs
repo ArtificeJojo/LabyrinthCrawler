@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveVal = 0.01f;
     public Camera cam;
+    public bool isMoving = false;
+    public GameObject player;
     // Update is called once per frame
     public void Update()
     {
@@ -29,15 +31,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
             moveVal = 0.05f;
+        
+        
+        
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(0, 0, moveVal);
+            player.transform.eulerAngles = new Vector3(0, 180, 0);
+            isMoving = true;
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(0, 0, -moveVal);
+            //player.transform.Rotate(0, 180, 0);
+            player.transform.eulerAngles = new Vector3(0, 0, 0);
+            isMoving = true;
         }
     }
 
@@ -45,15 +55,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
             moveVal = 0.05f;
+        
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(moveVal, 0, 0);
+            //player.transform.Rotate(0, 90, 0);
+            player.transform.eulerAngles = new Vector3(0, -90, 0);
+            isMoving = true;
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(-moveVal, 0, 0);
+            //player.transform.Rotate(0, -90, 0);
+            player.transform.eulerAngles = new Vector3(0, 90, 0);
+            isMoving = true;
         }
     }
     /*
