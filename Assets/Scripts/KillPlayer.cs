@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class KillPlayer : MonoBehaviour
 {
     private DebugMode debugMode;
-    private DeathScreen deathScreen;
+    public DeathScreen deathScreen;
+    public PlayerMovement playerMovement;
     public int sceneNo = 0;
 
     private void Start()
@@ -14,7 +15,7 @@ public class KillPlayer : MonoBehaviour
         debugMode = GetComponent<DebugMode>();
         deathScreen.Start();
     }
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (debugMode.isActive)
         {
@@ -23,7 +24,7 @@ public class KillPlayer : MonoBehaviour
 
         if(other.tag == "Walls")
         {
-            Destroy(gameObject);
+            playerMovement.Disable();
             deathScreen.PlayerDeath();
         }
     }

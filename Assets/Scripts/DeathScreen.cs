@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeathScreen : MonoBehaviour
 {
-    public GameObject respawnButton, quitButton;
+    public GameObject respawnButton, quitButton, deathPanel ;
     private KillPlayer killPlayer;
     public int moveVal = 2000;
     
@@ -13,6 +13,7 @@ public class DeathScreen : MonoBehaviour
     {
         respawnButton.transform.Translate(moveVal, 0, 0);
         quitButton.transform.Translate(moveVal, 0, 0);
+        deathPanel.transform.Translate(moveVal, 0, 0);
     }
 
     public void PlayerDeath()
@@ -20,5 +21,6 @@ public class DeathScreen : MonoBehaviour
         Time.timeScale = 0;
         respawnButton.transform.Translate(-moveVal, 0, 0);
         quitButton.transform.Translate(-moveVal, 0, 0);
+        deathPanel.transform.Translate(-moveVal, 0, 0);
     }
 }
