@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseButton : MonoBehaviour
 {
-    public GameObject resumeButton, restartButton, quitButton, pausePanel;
+    public GameObject resumeButton, restartButton, quitButton;
     public int moveVal = 2000;
     public PlayerMovement playerMovement;
     // Start is called before the first frame update
@@ -14,7 +14,6 @@ public class PauseButton : MonoBehaviour
         resumeButton.transform.Translate(moveVal, 0, 0);
         restartButton.transform.Translate(moveVal, 0, 0);
         quitButton.transform.Translate(moveVal, 0, 0);
-        pausePanel.transform.Translate(moveVal, 0, 0);
     }
 
     public void Unpause()
@@ -22,7 +21,6 @@ public class PauseButton : MonoBehaviour
         resumeButton.transform.Translate(moveVal, 0, 0);
         restartButton.transform.Translate(moveVal, 0, 0);
         quitButton.transform.Translate(moveVal, 0, 0);
-        pausePanel.transform.Translate(moveVal, 0, 0);
     }
     public void Paused()
     {   
@@ -31,7 +29,6 @@ public class PauseButton : MonoBehaviour
         resumeButton.transform.Translate(-moveVal, 0, 0);
         restartButton.transform.Translate(-moveVal, 0, 0);
         quitButton.transform.Translate(-moveVal, 0, 0);
-        pausePanel.transform.Translate(moveVal, 0, 0);
 
         playerMovement.Disable();
     }

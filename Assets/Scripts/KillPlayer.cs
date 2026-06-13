@@ -14,6 +14,7 @@ public class KillPlayer : MonoBehaviour
     {
         debugMode = GetComponent<DebugMode>();
         deathScreen.Start();
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -24,8 +25,16 @@ public class KillPlayer : MonoBehaviour
 
         if(other.tag == "Walls")
         {
-            playerMovement.Disable();
-            deathScreen.PlayerDeath();
+            StartCoroutine(ExecuteAfterDelay(3.0f));
         }
+    }
+    
+    IEnumerator ExecuteAfterDelay(float delay)
+    {
+        playerMovement.Disable();
+        deathScreen.PlayerDeath();
+        
+        yield return new WaitForSecondsRealtime(delay);
+        SceneManager.LoadScene(sceneNo);
     }
 }
