@@ -1300,9 +1300,13 @@ PrefabInstance:
       propertyPath: sceneNo
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 382757835, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 221
+      objectReference: {fileID: 0}
     - target: {fileID: 382757836, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
       propertyPath: m_text
-      value: 'Level: 5'
+      value: 'Level: 4'
       objectReference: {fileID: 0}
     - target: {fileID: 1341435462074137539, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
       propertyPath: m_RootOrder
@@ -1355,6 +1359,10 @@ PrefabInstance:
     - target: {fileID: 4240133812720875297, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
       propertyPath: sceneNo
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621434413872321863, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 222
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85738bf8f72b1b9479ef08d05c208bde, type: 3}
