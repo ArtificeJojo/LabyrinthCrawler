@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ebcaa8c83f5b4468383fe677dc52b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNo: 1
+  sceneNo: 2
 --- !u!1 &152548648
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level: 1'
+  m_text: 'Level: 2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 1884714518}
   playerMovement: {fileID: 1341435462074137543}
-  sceneNo: 1
+  sceneNo: 2
 --- !u!114 &17505716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,7 +1717,6 @@ MonoBehaviour:
   resumeButton: {fileID: 705692666}
   restartButton: {fileID: 108952083}
   quitButton: {fileID: 829719196}
-  pausePanel: {fileID: 0}
   moveVal: 1500
   playerMovement: {fileID: 1341435462074137543}
 --- !u!1 &7470438214842461768
@@ -1937,7 +1936,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2333739437278300345}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 649922d8009c07d479433317e0f924e5, type: 3}
   m_Controller: {fileID: 9100000, guid: 35bbd755854413f4a9ac132910e4becb, type: 2}
   m_CullingMode: 0
