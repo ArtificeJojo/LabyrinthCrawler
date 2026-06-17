@@ -22,7 +22,7 @@ public class DebugMode : MonoBehaviour
         if(Input.GetKey(KeyCode.Tab) && !isActive)
         {
             myColl.gameObject.SetActive(false);
-            killPlayer.enabled = false;
+            //killPlayer.enabled = false;
             isActive = true;
         }
         else if(Input.GetKey(KeyCode.Tab) && isActive)

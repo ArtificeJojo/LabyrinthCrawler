@@ -23,7 +23,7 @@ public class KillPlayer : MonoBehaviour
             return;
         }
 
-        if(other.tag == "Walls")
+        if(other.tag == "Walls" || other.tag == "FakeButton")
         {
             StartCoroutine(ExecuteAfterDelay(2.0f));
         }

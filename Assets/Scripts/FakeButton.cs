@@ -6,14 +6,26 @@ using UnityEngine.SceneManagement;
 public class FakeButton : MonoBehaviour
 {
     public GameObject killPlayer;
+    public DeathScreen deathScreen;
+    public PlayerMovement playerMovement;
     public int sceneNo;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Destroy(killPlayer);
-            SceneManager.LoadScene(sceneNo);
+
+            StartCoroutine(ExecuteAfterDelay(2.0f));
         }
+    }
+    
+    IEnumerator ExecuteAfterDelay(float delay)
+    {
+        playerMovement.Disable();
+        deathScreen.PlayerDeath();
+        
+        yield return new WaitForSeconds(delay);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneNo);
     }
 }
