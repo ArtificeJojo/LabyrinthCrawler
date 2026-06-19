@@ -12,7 +12,7 @@ public class ButtonMoveSide : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            moveObject.transform.position = new Vector3(x, moveObject.transform.position.y, z);
+            moveObject.transform.Translate(x, 0, z);
         }
     }
     

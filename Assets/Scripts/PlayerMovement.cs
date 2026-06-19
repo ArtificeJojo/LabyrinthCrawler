@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         UpDown();
         LeftRight();
-        //MoveDiagonal();
+        MoveDiagonal();
     }
 
     public void Disable()
@@ -73,23 +73,39 @@ public class PlayerMovement : MonoBehaviour
             isMoving = true;
         }
     }
-    /*
+    
     void MoveDiagonal()
     {
-        
+
         if (Input.GetKey(KeyCode.Q))
-                transform.Translate(-moveVal, 0, moveVal);
+        {
+            transform.Translate(-moveVal, 0, moveVal);
+            player.transform.eulerAngles = new Vector3(0, 135, 0);
+            isMoving = true;
+        }
 
         if (Input.GetKey(KeyCode.E))
-                transform.Translate(moveVal, 0, moveVal);
+        {
+            transform.Translate(moveVal, 0, moveVal);
+            player.transform.eulerAngles = new Vector3(0, -135, 0);
+            isMoving = true;
+        }
 
         if (Input.GetKey(KeyCode.Z))
-                transform.Translate(-moveVal, 0, -moveVal);
+        {
+            transform.Translate(-moveVal, 0, -moveVal);
+            player.transform.eulerAngles = new Vector3(0, 45, 0);
+            isMoving = true;
+        }
 
         if (Input.GetKey(KeyCode.C))
-                transform.Translate(moveVal, 0, -moveVal);
+        {
+            transform.Translate(moveVal, 0, -moveVal);
+            player.transform.eulerAngles = new Vector3(0, -45, 0);
+            isMoving = true;
+        }
         
     }
-    */
+   
     
 }
