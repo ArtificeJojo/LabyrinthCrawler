@@ -1791,7 +1791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186786461910875872, guid: 92e9f0aa06cec4a48bfa1ddcf1d85e54, type: 3}
       propertyPath: nextScene
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e9f0aa06cec4a48bfa1ddcf1d85e54, type: 3}
@@ -2039,8 +2039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e983a374c691627469db7e6ddb5897c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 1
-  z: 0
+  x: 0
+  z: -2
   moveObject: {fileID: 1491748505}
 --- !u!1001 &1883686637
 PrefabInstance:
